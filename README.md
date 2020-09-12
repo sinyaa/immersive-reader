@@ -17,10 +17,10 @@ npm install immersive-reader
 
 The code would render a button which invokes Immersive Reader. See how it looks on DTML Platform: https://dtml.org
 
-## Parameters:
+Parameters:
 
-text: text to render within immersive reader
-title: title of the text to render within immersive reader
-locale: locale for the button text
-tokenURL: Immersive Reader needs a token to authorize calls to Azure Congnitive Services Immersive Reader endpoint. The token endpoint should be setup as a backend service based on [this instructions](https://docs.microsoft.com/en-us/azure/cognitive-services/immersive-reader/quickstarts/client-libraries?pivots=programming-language-csharp). 
+- text: text to render within immersive reader
+- title: title of the text to render within immersive reader
+- locale: locale for the button text
+- tokenURL: Immersive Reader needs a token to authorize calls to Azure Congnitive Services Immersive Reader endpoint. The token endpoint should be setup as a backend service based on [this instructions](https://docs.microsoft.com/en-us/azure/cognitive-services/immersive-reader/quickstarts/client-libraries?pivots=programming-language-csharp). 
 
