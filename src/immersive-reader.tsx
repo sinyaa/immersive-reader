@@ -22,11 +22,11 @@ export interface Props {
   title: string;
   text: string;
   tokenURL: string;
-  locale: string;
+  locale?: string;
+  options: any;
 }
 
 export class ImmersiveReader extends React.Component<Props> {
-
   constructor(props: Props) {
     super(props);
   }
@@ -39,9 +39,6 @@ getTokenandLaunch() {
   fetch(this.props.tokenURL, { credentials: `include`, cache: "no-store" })
   .then(response => response.json())
   .then (body => {
-      const options = {
-          "uiZIndex": 2000 
-      };
         const data = {
             title: this.props.title,
             chunks: [{
@@ -50,8 +47,8 @@ getTokenandLaunch() {
                 mimeType: "text/plain"
             }]
         };
-        launchAsync(body.token, body.subdomain, data, options)
-           .catch(function (error) {
+        launchAsync(body.token, body.subdomain, data, this.props.options)
+           .catch(function (error:any) {
                   console.log("Error in launching the Immersive Reader.");
                   console.log(error);
               }); 
@@ -70,7 +67,6 @@ render() {
           data-locale={this.props.locale}></button>
    );}
 }
-
 
 export default ImmersiveReader;
 
