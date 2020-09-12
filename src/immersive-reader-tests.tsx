@@ -1,7 +1,6 @@
 import * as React from 'react'
 import { shallow } from 'enzyme'
 import { expect } from 'chai';
-import 'mocha';
 
 import ImmersiveReader from './immersive-reader';
 
